@@ -1,0 +1,7 @@
+@use "../../abstracts/colors.scss";
+
+.score{
+    font-size: 6rem;
+    color: map-get(colors.$cookie, "spots");
+    transform: translateY(-100%);
+}

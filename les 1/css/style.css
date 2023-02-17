@@ -1,0 +1,252 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #B7CADB, #54BAB9);
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.cookie {
+  width: 40rem;
+  background: #C69B7B;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 7rem 2rem #533321, 2rem 2rem 5rem 0 rgb(65, 65, 65);
+  transform: translateY(-15%);
+}
+.cookie:hover {
+  scale: 0.9;
+  cursor: pointer;
+}
+.cookie__spots {
+  width: 6rem;
+  aspect-ratio: 1/1;
+  background-color: rgb(65, 40, 26);
+  border-radius: 50%;
+  position: absolute;
+}
+.cookie__spots--first {
+  top: 10rem;
+  left: 5%;
+}
+.cookie__spots--second {
+  right: 10rem;
+  top: 2rem;
+}
+.cookie__spots--third {
+  right: 10%;
+  bottom: 10%;
+}
+.cookie__spots--fourth {
+  left: 10%;
+  bottom: 10%;
+}
+.cookie__spots--fifth {
+  left: calc(50% - 5rem);
+  top: calc(50% - 5rem);
+}
+.cookie__spots--sixth {
+  top: 10rem;
+  right: 5rem;
+}
+.cookie__spots--seventh {
+  bottom: 8rem;
+  left: 15rem;
+}
+.cookie__spots--eighth {
+  top: 5rem;
+  left: 10rem;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap-reverse;
+}
+
+.header {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 50% 50%;
+  padding: 2rem;
+}
+
+.upgrades {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: max-content;
+  border-radius: 1rem;
+}
+.upgrades__upgrade {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  transition-duration: 0.3s;
+}
+.upgrades__upgrade:hover {
+  color: whitesmoke;
+  background-color: rgb(65, 40, 26);
+  cursor: pointer;
+}
+.upgrades__upgrade:nth-of-type(1) {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.upgrades__upgrade:nth-of-type(2) {
+  gap: 1.5rem;
+}
+.upgrades__upgrade:nth-of-type(3) {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.upgradesMobile {
+  display: none;
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.upgradesMobile__upgrade {
+  width: auto;
+  min-width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+  transition-duration: 0.3s;
+}
+.upgradesMobile__upgrade:hover {
+  scale: 1.1;
+  background-color: rgb(65, 40, 26);
+  color: whitesmoke;
+}
+
+.save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.3rem;
+  font-size: 100%;
+  height: min-content;
+  width: min-content;
+  padding: 2rem;
+  appearance: none;
+  border: none;
+  border-radius: 11rem;
+  background-color: rgb(65, 40, 26);
+  color: whitesmoke;
+  transition-duration: 0.5s;
+}
+.save:hover {
+  scale: 1.1;
+  background-color: #2f1d13;
+  cursor: pointer;
+}
+
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  background-color: #C69B7B;
+  width: 7rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  position: relative;
+}
+.avatar:hover {
+  scale: 1.1;
+}
+.avatar__head {
+  top: 20%;
+  left: 2rem;
+  position: absolute;
+  background-color: rgb(65, 40, 26);
+  border-radius: 50%;
+  height: 3rem;
+  aspect-ratio: 1/1;
+}
+.avatar__body {
+  top: 4.5rem;
+  left: 1rem;
+  position: absolute;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  background-color: rgb(65, 40, 26);
+  border-radius: 50%;
+}
+
+.score {
+  font-size: 6rem;
+  color: rgb(65, 40, 26);
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 62.5rem) {
+  .save {
+    display: none;
+  }
+  .upgrades {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main {
+    flex-direction: column-reverse;
+  }
+  .cookie {
+    scale: 0.7;
+  }
+  .cookie:hover {
+    scale: 0.6;
+  }
+  .upgradesMobile {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
