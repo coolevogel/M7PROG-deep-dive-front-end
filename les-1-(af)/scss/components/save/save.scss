@@ -1,0 +1,25 @@
+@use "../../abstracts/colors.scss";
+
+.save{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.3rem;
+    font-size: 100%;
+    height: min-content;
+    width: min-content;
+    padding: 2rem;
+    appearance: none;
+    border: none;
+    border-radius: 11rem;
+    background-color: map-get(colors.$cookie, "spots");
+    color: whitesmoke;
+    transition-duration: 0.5s;
+
+    &:hover{
+        scale: 1.1;
+        background-color: darken(map-get(colors.$cookie, "spots"), 5%);
+        cursor: pointer;
+    }
+}

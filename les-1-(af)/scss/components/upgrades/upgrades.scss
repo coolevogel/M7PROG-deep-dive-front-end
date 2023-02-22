@@ -1,0 +1,71 @@
+@use "../../abstracts/colors.scss";
+
+.upgrades{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: map-get(colors.$upgrades, "background");
+    width: max-content;
+    border-radius: 1rem;
+
+
+    &__upgrade{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        transition-duration: 0.3s;
+
+        &:hover{
+            color: whitesmoke;
+            background-color: map-get(colors.$cookie, "spots" );
+            cursor: pointer;;
+        }
+
+        &:nth-of-type(1){
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        &:nth-of-type(2){
+            gap: 1.5rem;
+        }
+
+        &:nth-of-type(3){
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+    }
+}
+
+.upgradesMobile{
+    display: none;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    
+
+    &__upgrade{
+        width: auto;
+        min-width: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: map-get(colors.$upgrades, "background");
+        border-radius: 1rem;
+        padding: 1rem;
+        gap: 1rem;
+        transition-duration: 0.3s;
+
+        &:hover{
+            scale: 1.1;
+            background-color: map-get(colors.$cookie, "spots");
+            color: whitesmoke;
+        }
+    }
+}

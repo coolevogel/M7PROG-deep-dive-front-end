@@ -1,0 +1,37 @@
+@use "../../abstracts/colors.scss";
+
+.avatar{
+    position: relative;
+    border-radius: 50%;
+    background-color: map-get(colors.$cookie, "background");
+    width: 7rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    position: relative;
+    
+
+    &:hover{
+        scale: 1.1;
+    }
+
+    &__head{
+        top: 20%;
+        left: 2rem;
+        position: absolute;
+        background-color: map-get(colors.$cookie, spots);
+        border-radius: 50%;
+        height: 3rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__body{
+        top: 4.5rem;
+        left: 1rem;
+        position: absolute;
+        height: 5rem;
+        aspect-ratio: 1/1;
+        background-color: map-get(colors.$cookie, spots);
+        border-radius: 50%;
+    }
+}
